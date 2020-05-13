@@ -1,52 +1,39 @@
-# Prerequisites
-*.d
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+#include<stdio.h>
 
-# Linker output
-*.ilk
-*.map
-*.exp
+ struct Employee
+{
+   int Id;
+   char Name[25];
+   int Age;
+   long Salary;
+  };
 
-# Precompiled Headers
-*.gch
-*.pch
+void main()
+{
+  int i;
+  struct Employee Emp[ 20 ];       
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+  for(i=0;i<20;i++)
+                  {
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+printf("\nEnter details of %d Employee",i+1);
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+printf("\n\tEnter Employee Id : ");
+ scanf("%d",&Emp[i].Id);
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+printf("\n\tEnter Employee Name : ");
+ scanf("%s",&Emp[i].Name);
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+printf("\n\tEnter Employee Age : ");
+ scanf("%d",&Emp[i].Age);
+ 
+printf("\n\tEnter Employee Salary : ");
+ scanf("%ld",&Emp[i].Salary);
+              }
+
+printf("\nDetails of Employees");
+    for(i=0;i<20;i++)
+    printf("\n\n%d\t%s\t%d\t%ld",Emp[i].Id,Emp[i].Name,Emp[i].Age,Emp[i].Salary);
+
+       }
